@@ -1,103 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vaibhav Hasu | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-    header {
-      background-color: #1f2937;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin-bottom: 10px;
-    }
-    header a {
-      color: #60a5fa;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 10px;
-    }
-    .project {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1f2937;
-      color: white;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Vaibhav Hasu | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  margin: 10px 0 5px;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+header a {
+  color: #60a5fa;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  border-left: 5px solid #2563eb;
+  padding-left: 10px;
+}
+
+/* About */
+.about {
+  line-height: 1.7;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Certifications */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
+  <img src="profile.jpg" alt="Vaibhav Hasu">
   <h1>Vaibhav Hasu</h1>
   <p>Data Analytics Graduate Student | ML & NLP Enthusiast</p>
   <a href="https://github.com/VaibhavHasu">GitHub</a>
   <a href="https://www.linkedin.com/in/vaibhav-hasu-5414a1355/">LinkedIn</a>
 </header>
 
-<section>
+<!-- ABOUT -->
+<section class="about">
   <h2>About Me</h2>
   <p>
     I am a Data Analytics graduate student at George Mason University with hands-on
     experience in data analysis, machine learning, NLP, and big data technologies.
-    I enjoy transforming complex datasets into actionable insights using Python and SQL.
+    I enjoy transforming complex datasets into actionable insights using Python, SQL,
+    and modern analytics tools.
   </p>
 </section>
 
+<!-- PROJECTS -->
 <section>
   <h2>Projects</h2>
+  <div class="projects">
 
-  <div class="project">
-    <h3>Social Media Trend Analysis</h3>
-    <p>Analyzed 48,000+ social media posts using NLP techniques to identify sentiment,
-       emotions, and trending topics.</p>
-    <p><b>Tech:</b> Python, BERT, BERTopic</p>
-    <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub</a>
+    <div class="project">
+      <h3>Social Media Trend Analysis</h3>
+      <p>NLP pipeline analyzing 48,000+ posts for sentiment, emotion, and trending topics.</p>
+      <p><b>Tech:</b> Python, BERT, BERTopic</p>
+      <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project">
+      <h3>Mental Health Care Utilization</h3>
+      <p>Analyzed U.S. mental health service usage and demographic disparities.</p>
+      <p><b>Tech:</b> Python, R, SQL</p>
+      <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project">
+      <h3>Movie Rating Prediction System</h3>
+      <p>Built a recommender system using collaborative filtering and KNN.</p>
+      <p><b>Tech:</b> Python, Machine Learning</p>
+      <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project">
+      <h3>Toxic Comment Classification</h3>
+      <p>Text classification using ML and deep learning models.</p>
+      <p><b>Tech:</b> Python, TensorFlow, NLP</p>
+      <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
+    </div>
+
   </div>
-
-  <div class="project">
-    <h3>Movie Rating Prediction System</h3>
-    <p>Built a recommender system using collaborative filtering and KNN to predict
-       movie ratings.</p>
-    <p><b>Tech:</b> Python, Machine Learning</p>
-  </div>
-
 </section>
 
+<!-- CERTIFICATIONS -->
 <section>
   <h2>Certifications</h2>
   <ul>
     <li>Google Data Analytics Professional – Coursera</li>
     <li>IBM Data Analytics Professional Certificate</li>
     <li>Oracle Database Programming with SQL</li>
+    <li>Python Basics – E-Box</li>
   </ul>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>Email: hasuvaibhav@gmail.com</p>
 </footer>
