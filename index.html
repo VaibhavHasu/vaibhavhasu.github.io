@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ---------- GLOBAL ---------- */
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
@@ -13,12 +14,17 @@ body {
   color: #1f2937;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+/* ---------- HEADER ---------- */
 header {
   background: linear-gradient(135deg, #1f2937, #111827);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 header img {
@@ -26,8 +32,13 @@ header img {
   height: 150px;
   border-radius: 50%;
   border: 4px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   margin-bottom: 15px;
-  animation: fadeIn 1.5s ease;
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
 }
 
 header h1 {
@@ -36,16 +47,15 @@ header h1 {
 
 header p {
   opacity: 0.9;
+  margin-bottom: 15px;
 }
 
-header a {
-  color: #60a5fa;
+header .links a {
   margin: 0 10px;
-  text-decoration: none;
   font-weight: 600;
 }
 
-/* Sections */
+/* ---------- SECTIONS ---------- */
 section {
   max-width: 1000px;
   margin: auto;
@@ -58,12 +68,17 @@ h2 {
   padding-left: 10px;
 }
 
-/* About */
+/* ---------- ABOUT ---------- */
 .about {
   line-height: 1.7;
 }
 
-/* Projects */
+/* ---------- SKILLS ---------- */
+.skills p {
+  line-height: 1.8;
+}
+
+/* ---------- PROJECTS ---------- */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,13 +102,11 @@ h2 {
   margin-top: 0;
 }
 
-.project a {
-  text-decoration: none;
-  color: #2563eb;
-  font-weight: 600;
+.project p {
+  font-size: 0.95rem;
 }
 
-/* Certifications */
+/* ---------- CERTIFICATIONS ---------- */
 ul {
   padding-left: 20px;
 }
@@ -102,34 +115,31 @@ li {
   margin-bottom: 10px;
 }
 
-/* Footer */
+/* ---------- FOOTER ---------- */
 footer {
   background: #111827;
   color: white;
   text-align: center;
   padding: 20px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  font-size: 0.9rem;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header>
   <img src="profile.jpg" alt="Vaibhav Hasu">
   <h1>Vaibhav Hasu</h1>
   <p>Data Analytics Graduate Student | ML & NLP Enthusiast</p>
-  <a href="https://github.com/VaibhavHasu">GitHub</a>
-  <a href="https://www.linkedin.com/in/vaibhav-hasu-5414a1355/">LinkedIn</a>
+  <div class="links">
+    <a href="https://github.com/VaibhavHasu" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/vaibhav-hasu-5414a1355/" target="_blank">LinkedIn</a>
+  </div>
 </header>
 
-<!-- ABOUT -->
+<!-- ===== ABOUT ===== -->
 <section class="about">
   <h2>About Me</h2>
   <p>
@@ -140,43 +150,72 @@ footer {
   </p>
 </section>
 
-<!-- PROJECTS -->
+<!-- ===== SKILLS ===== -->
+<section class="skills">
+  <h2>Skills</h2>
+  <p>
+    <b>Programming:</b> Python, SQL, R<br>
+    <b>Data Science:</b> Machine Learning, NLP, EDA, Feature Engineering<br>
+    <b>Big Data:</b> Hadoop, Spark, PySpark, Databricks<br>
+    <b>Databases:</b> MySQL, MongoDB, SQL Server<br>
+    <b>Tools:</b> Jupyter, Power BI, TensorFlow, Git
+  </p>
+</section>
+
+<!-- ===== PROJECTS ===== -->
 <section>
   <h2>Projects</h2>
   <div class="projects">
 
     <div class="project">
       <h3>Social Media Trend Analysis</h3>
-      <p>NLP pipeline analyzing 48,000+ posts for sentiment, emotion, and trending topics.</p>
+      <p>
+        NLP pipeline analyzing 48,000+ posts for sentiment, emotion, and trending topics.
+      </p>
       <p><b>Tech:</b> Python, BERT, BERTopic</p>
       <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
-      <h3>Mental Health Care Utilization</h3>
-      <p>Analyzed U.S. mental health service usage and demographic disparities.</p>
+      <h3>Mental Health Care Utilization Trends</h3>
+      <p>
+        Analyzed U.S. mental health service usage and demographic disparities using survey data.
+      </p>
       <p><b>Tech:</b> Python, R, SQL</p>
       <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Movie Rating Prediction System</h3>
-      <p>Built a recommender system using collaborative filtering and KNN.</p>
+      <p>
+        Built a recommender system using collaborative filtering and KNN.
+      </p>
       <p><b>Tech:</b> Python, Machine Learning</p>
       <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="project">
       <h3>Toxic Comment Classification</h3>
-      <p>Text classification using ML and deep learning models.</p>
+      <p>
+        Developed ML and deep learning models to classify toxic online comments.
+      </p>
       <p><b>Tech:</b> Python, TensorFlow, NLP</p>
+      <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project">
+      <h3>Vitamin Deficiency Predictor</h3>
+      <p>
+        Web-based application to predict vitamin deficiencies using user symptoms.
+      </p>
+      <p><b>Tech:</b> HTML, CSS, JavaScript, MySQL</p>
       <a href="https://github.com/VaibhavHasu/Projects-" target="_blank">View on GitHub →</a>
     </div>
 
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- ===== CERTIFICATIONS ===== -->
 <section>
   <h2>Certifications</h2>
   <ul>
@@ -184,12 +223,14 @@ footer {
     <li>IBM Data Analytics Professional Certificate</li>
     <li>Oracle Database Programming with SQL</li>
     <li>Python Basics – E-Box</li>
+    <li>Data Science Basics – 360DigiTMG</li>
   </ul>
 </section>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer>
   <p>Email: hasuvaibhav@gmail.com</p>
+  <p>© 2026 Vaibhav Hasu</p>
 </footer>
 
 </body>
