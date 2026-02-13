@@ -1,110 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaibhav Hasu | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaibhav Hasu | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* Body */
+    body { font-family: 'Arial', sans-serif; background:#f5f5f5; color:#333; }
+
+    /* Hero Section */
+    header.hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #1e1e2f;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #fff;
+    }
+
+    h1 { font-size: 2.8rem; margin-bottom: 10px; }
+    p { font-size: 1.2rem; margin-bottom: 20px; }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #ff4b2b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #ff6b4b; }
+
+    /* Projects Section */
+    section#projects {
+      padding: 80px 20px;
+      text-align: center;
+      background: #fff;
+    }
+    section#projects h2 { font-size: 2rem; margin-bottom: 20px; }
+    section#projects p { font-size: 1rem; margin-bottom: 40px; color: #666; }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">Vaibhav Hasu</div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </nav>
-
-  <div class="social-icons">
-    <a href="https://github.com/VaibhavHasu" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="resume.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
-  </div>
+<!-- Hero Section -->
+<header class="hero">
+  <img src="images/profile.jpeg" alt="Vaibhav Hasu" class="profile-pic">
+  <h1>Hi, I’m Vaibhav Hasu</h1>
+  <p>Data Analyst | Portfolio Projects Showcase</p>
+  <a href="#projects" class="btn">View Projects</a>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Hi, I’m <br>Vaibhav Hasu</h1>
-    <p>
-      Graduate student passionate about Data Analytics, Machine Learning,
-      NLP, and solving real-world problems using data-driven insights.
-    </p>
-
-    <div class="buttons">
-      <a href="resume.pdf" class="btn primary" target="_blank">View Resume</a>
-      <a href="#projects" class="btn secondary">See Projects</a>
-    </div>
-  </div>
-
-  <div class="hero-img">
-    <img src="images/profile.jpg" alt="Vaibhav Hasu">
-  </div>
-</section>
-
-<section id="projects" class="section">
+<!-- Projects Section -->
+<section id="projects">
   <h2>Projects</h2>
+  <p>Here are some of the projects I’ve worked on:</p>
 
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <img src="images/ait580.png">
-      <h3>AIT 580 – Data Analytics</h3>
-      <p>Python, SQL, visualization, analytics.</p>
-      <a href="https://github.com/VaibhavHasu/Projects-/tree/main/VhasuProjects/AIT580" target="_blank">
-        <button>View Code</button>
-      </a>
+  <!-- Example project cards -->
+  <div class="project-cards" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+    <div style="background:#f0f0f0; padding:20px; border-radius:10px; width:250px;">
+      <h3>Project 1</h3>
+      <p>Short description of your project.</p>
+      <a href="#" class="btn" style="padding:8px 16px;">View Code</a>
     </div>
-
-    <div class="project-card">
-      <img src="images/ait614.png">
-      <h3>AIT 614 – Big Data</h3>
-      <p>Hadoop, Spark, distributed systems.</p>
-      <a href="https://github.com/VaibhavHasu/Projects-/tree/main/VhasuProjects/AIT614" target="_blank">
-        <button>View Code</button>
-      </a>
+    <div style="background:#f0f0f0; padding:20px; border-radius:10px; width:250px;">
+      <h3>Project 2</h3>
+      <p>Short description of your project.</p>
+      <a href="#" class="btn" style="padding:8px 16px;">View Code</a>
     </div>
-
-    <div class="project-card">
-      <img src="images/cs.png">
-      <h3>Computer Science</h3>
-      <p>Core CS and system-level projects.</p>
-      <a href="https://github.com/VaibhavHasu/Projects-/tree/main/VhasuProjects/CS" target="_blank">
-        <button>View Code</button>
-      </a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/nlp.png">
-      <h3>NLP Projects</h3>
-      <p>BERT, sentiment, topic modeling.</p>
-      <a href="https://github.com/VaibhavHasu/Projects-/tree/main/VhasuProjects/NLP" target="_blank">
-        <button>View Code</button>
-      </a>
-    </div>
-
-    <div class="project-card">
-      <img src="images/stats.png">
-      <h3>Statistics</h3>
-      <p>Regression, hypothesis testing.</p>
-      <a href="https://github.com/VaibhavHasu/Projects-/tree/main/VhasuProjects/Stats" target="_blank">
-        <button>View Code</button>
-      </a>
-    </div>
-
   </div>
 </section>
-
-<footer>
-  © 2026 Vaibhav Hasu
-</footer>
 
 </body>
 </html>
