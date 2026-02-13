@@ -6,58 +6,52 @@
   <title>Vaibhav Hasu | Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Basic Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    /* Body */
-    body { font-family: 'Arial', sans-serif; background:#f5f5f5; color:#333; }
+    /* Reset */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Arial', sans-serif; background:#f5f5f5; color:#333; }
 
     /* Hero Section */
     header.hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: #1e1e2f;
-      color: #fff;
-      text-align: center;
-      padding: 0 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      background:#1e1e2f;
+      color:#fff;
+      text-align:center;
+      padding:0 20px;
     }
-
     .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-      border: 3px solid #fff;
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:20px;
+      border:3px solid #fff;
     }
-
-    h1 { font-size: 2.8rem; margin-bottom: 10px; }
-    p { font-size: 1.2rem; margin-bottom: 20px; }
-
-    /* Button */
-    .btn {
-      display: inline-block;
-      padding: 12px 28px;
-      background: #ff4b2b;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn:hover { background: #ff6b4b; }
+    h1 { font-size:2.8rem; margin-bottom:10px; }
+    p { font-size:1.2rem; margin-bottom:20px; }
+    .btn { display:inline-block; padding:12px 28px; background:#ff4b2b; color:#fff; text-decoration:none; border-radius:30px; font-weight:bold; transition:0.3s; }
+    .btn:hover { background:#ff6b4b; }
 
     /* Projects Section */
-    section#projects {
-      padding: 80px 20px;
-      text-align: center;
-      background: #fff;
+    section#projects { padding:80px 20px; text-align:center; background:#fff; }
+    section#projects h2 { font-size:2rem; margin-bottom:20px; }
+    section#projects p { font-size:1rem; margin-bottom:40px; color:#666; }
+
+    .project-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+    .project-card {
+      background:#f0f0f0; padding:20px; border-radius:10px; width:280px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:0.3s;
     }
-    section#projects h2 { font-size: 2rem; margin-bottom: 20px; }
-    section#projects p { font-size: 1rem; margin-bottom: 40px; color: #666; }
+    .project-card:hover { transform:translateY(-5px); box-shadow:0 8px 12px rgba(0,0,0,0.15); }
+    .project-card h3 { font-size:1.3rem; margin-bottom:10px; }
+    .project-card p { font-size:0.95rem; margin-bottom:15px; color:#555; }
+    .project-card a.btn { padding:8px 16px; font-size:0.9rem; }
+
+    /* Footer */
+    footer { background:#1e1e2f; color:#fff; text-align:center; padding:20px; font-size:0.9rem; }
+    footer a { color:#ff4b2b; text-decoration:none; }
   </style>
 </head>
 <body>
@@ -66,29 +60,64 @@
 <header class="hero">
   <img src="images/profile.jpeg" alt="Vaibhav Hasu" class="profile-pic">
   <h1>Hi, I’m Vaibhav Hasu</h1>
-  <p>Data Analyst | Portfolio Projects Showcase</p>
+  <p>Data Analyst | NLP & Python Projects | Portfolio Showcase</p>
   <a href="#projects" class="btn">View Projects</a>
 </header>
 
 <!-- Projects Section -->
 <section id="projects">
-  <h2>Projects</h2>
-  <p>Here are some of the projects I’ve worked on:</p>
+  <h2>My Projects</h2>
+  <p>Here are some of my work highlights:</p>
 
-  <!-- Example project cards -->
-  <div class="project-cards" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-    <div style="background:#f0f0f0; padding:20px; border-radius:10px; width:250px;">
-      <h3>Project 1</h3>
-      <p>Short description of your project.</p>
-      <a href="#" class="btn" style="padding:8px 16px;">View Code</a>
+  <div class="project-cards">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>COVID-19 Behavior Change Study</h3>
+      <p>Analyzed sector-wise customer satisfaction using Python, regression, and visualization. Identified key insights to inform equitable policies.</p>
+      <a href="https://github.com/raoo-nehaa/COVID-19-Behavior-Change-Impact-Study" class="btn" target="_blank">View Code</a>
     </div>
-    <div style="background:#f0f0f0; padding:20px; border-radius:10px; width:250px;">
-      <h3>Project 2</h3>
-      <p>Short description of your project.</p>
-      <a href="#" class="btn" style="padding:8px 16px;">View Code</a>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>Movie Rating Prediction System</h3>
+      <p>Built a predictive system using Python and KNN to forecast movie ratings based on user preferences and historical data.</p>
+      <a href="https://github.com/raoo-nehaa/Movie-Rating-Prediction-System" class="btn" target="_blank">View Code</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <h3>Chicago Public Library Event Analysis</h3>
+      <p>Performed data cleaning and visualization to analyze library events attendance trends using Python and SQL.</p>
+      <a href="https://github.com/raoo-nehaa/Chicago-Public-Library-Event-Analysis" class="btn" target="_blank">View Code</a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <h3>Social Media Trend Analysis</h3>
+      <p>Analyzed social media posts from Twitter, Instagram, and Facebook using NLP (BERT, BERTopic) to identify emerging trends.</p>
+      <a href="https://github.com/raoo-nehaa/Social-Media-Trend-Analysis" class="btn" target="_blank">View Code</a>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <h3>Bridge Design Materials & Climate Study</h3>
+      <p>Investigated the effect of materials and climate exposure on bridge deterioration using Python and statistical modeling.</p>
+      <a href="https://github.com/raoo-nehaa/Bridge-Design-Materials-Study" class="btn" target="_blank">View Code</a>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card">
+      <h3>Data Integration & Patient Matching</h3>
+      <p>Integrated multi-source data using SQL and analyzed trends across age, income, and regions to improve healthcare insights.</p>
+      <a href="https://github.com/raoo-nehaa/Data-Integration-Patient-Matching" class="btn" target="_blank">View Code</a>
     </div>
   </div>
 </section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2026 Vaibhav Hasu | <a href="mailto:nrao6@gmu.edu">hasuvaibhav@gmail.com</a> | <a href="https://www.linkedin.com/in/neha-rao-415843193/" target="_blank">LinkedIn</a>
+</footer>
 
 </body>
 </html>
